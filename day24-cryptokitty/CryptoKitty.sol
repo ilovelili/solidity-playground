@@ -31,7 +31,7 @@ contract CryptoKitty is ERC721Token {
         uint geneA = _random(4) > 1 ? kitty1.geneA : kitty2.geneA;
         uint geneB = _random(4) > 1 ? kitty1.geneB : kitty2.geneB;
         kitties[nextId] = Kitty(nextId, maxGen, geneA ,geneB);
-        _mint(nextId, msg.sender);
+        _mint(msg.sender, nextId);
         nextId++;
     }
     
